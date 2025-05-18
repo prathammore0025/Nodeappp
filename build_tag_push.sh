@@ -23,9 +23,6 @@ fi
 docker build -t ${IMAGE_NAME}:latest .
 docker tag ${IMAGE_NAME}:latest ${IMAGE_NAME}:${NEW_VERSION}
 
-# Log in to Docker Hub
-echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-
 # Push the new image to Docker Hub
 docker push ${IMAGE_NAME}:${NEW_VERSION}
 
