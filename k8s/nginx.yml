@@ -1,0 +1,17 @@
+# test-pod.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug-pod
+spec:
+  containers:
+  - name: debug
+    image: alpine
+    command: [ "sleep", "3600" ]  # keep the pod running
+    env:
+      - name: MONGODB_URI
+        valueFrom:
+          secretKeyRef:
+            name: mongo-secret
+            key: MONGODB_URI
+
