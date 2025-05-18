@@ -18,11 +18,11 @@ spec:
           ports:
             - containerPort: 3000
           env:
-            - name: MONGODB_URI
+            - name: MONGO_URI
               valueFrom:
                 secretKeyRef:
                   name: mongo-secret
-                  key: MONGODB_URI
+                  key: mongo-uri
             - name: PORT
               valueFrom:
                 configMapKeyRef:
