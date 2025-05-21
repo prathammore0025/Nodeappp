@@ -44,7 +44,7 @@ app.use((err, req, res, next) => {
 
 // Start server
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Rolling update ${port}`);
 });
 
 module.exports = app; // For testing purposes
