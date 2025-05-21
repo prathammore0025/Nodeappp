@@ -24,7 +24,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 app.get('/', (req, res) => {
   res.status(200).json({
     status: 'ok',
-    message: 'Server is running',
+    message: 'Rolling update',
     timestamp: new Date()
   });
 });
@@ -44,7 +44,7 @@ app.use((err, req, res, next) => {
 
 // Start server
 app.listen(port, () => {
-  console.log(`Rolling update ${port}`);
+  console.log(`Server is running on ${port}`);
 });
 
 module.exports = app; // For testing purposes
