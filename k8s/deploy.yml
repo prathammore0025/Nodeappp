@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: node-container
-          image: prathammore0025/node-app:v2
+          image: prathammore0025/node-app:v1
           ports:
             - containerPort: 3000
           env:
