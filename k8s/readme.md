@@ -1,7 +1,7 @@
 ```
 kubectl delete secret mongo-secret
 kubectl create secret generic mongo-secret \
-  --from-literal=MONGODB_URI='mongodb+srv://prathm:12345678p@prathm.dqbotpy.mongodb.net/?retryWrites=true&w=majority&appName=Prathm'
+  --from-literal=MONGODB_URI='mongodb+srv://prathm:<your_password>@prathm.dqbotpy.mongodb.net/?retryWrites=true&w=majority&appName=Prathm'
 ```
 
 #🔄 After That:
